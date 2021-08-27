@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background: #151fde;
+    background: #f8e8ed;
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
 
@@ -28,15 +28,15 @@ export const Marginals = css`
 `;
 
 export const ImageContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
-position: relative;
-height: 600px;
-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 600px;
+  width: 400px;
 `;
 
 export const Wrapper = styled.section`
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
