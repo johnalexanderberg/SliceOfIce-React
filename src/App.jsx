@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import ImgBox from "./components/ImgBox";
+import { calculateDistance } from "./logic";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 
 // prettier-ignore
@@ -20,17 +21,8 @@ const App = () => {
 
   const easing = (num) => Math.pow(num, 3);
 
-  const calculateDistance = ([x, y]) => {
-    const center = [window.innerWidth / 2, window.innerHeight / 2];
-    const maxHypot = Math.hypot(center[0], center[1]);
-    const hypot = Math.hypot(center[0] - x, center[1] - y);
-    const distance = hypot / maxHypot;
-    const easeDistance = easing(distance);
-    setDistance(easeDistance);
-  };
-
   const handleMove = ({ clientX, clientY }) => {
-    calculateDistance([clientX, clientY]);
+    setDistance(easing(calculateDistance([clientX, clientY])));
   };
 
   const handleTouchMove = ({ touches }) => {
