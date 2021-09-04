@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as LogoSVG } from "./logo.svg";
+import { ReactComponent as LogoSVG } from "./logo2.svg";
 import { Marginals } from "../../styles";
 
 export const Logo = styled(LogoSVG)`
