@@ -9,6 +9,7 @@ export function calculateDistance([x, y]) {
 
 export function createMatrix(x, y) {
   if (x <= 0 || isNaN(x) || y <= 0 || isNaN(y)) {
+    console.log("invalid parameters");
     return;
   }
 
@@ -16,8 +17,7 @@ export function createMatrix(x, y) {
   matrix.length = x * y;
 
   for (let i = 0; i < matrix.length; i++) {
-    const array = [Math.floor(i % x), Math.floor(i / x)];
-    matrix[i] = array;
+    matrix[i] = [Math.floor(i % x), Math.floor(i / x)];
   }
 
   return matrix;
