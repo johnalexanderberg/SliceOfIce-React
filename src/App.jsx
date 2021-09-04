@@ -17,7 +17,9 @@ const App = () => {
   };
 
   const handleTouchMove = ({ touches }) => {
-    calculateDistance([touches[0].clientX], [touches[0].clientY]);
+    setDistance(
+      easing(calculateDistance([touches[0].clientX, touches[0].clientY]))
+    );
   };
 
   return (
