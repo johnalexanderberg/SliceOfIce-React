@@ -12,4 +12,8 @@ export const Image = styled.div.attrs(({ $movedX, $movedY }) => ({
   position: relative;
   background-position: ${({ $initialX, $initialY }) =>
     `-${$initialX * 100}px -${$initialY * 100}px`};
+
+  @media (max-width: 410px) {
+    font-size: 18px;
+  } ;
 `;

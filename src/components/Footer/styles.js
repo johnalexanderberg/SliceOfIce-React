@@ -14,6 +14,17 @@ export const H2 = styled.h2`
   line-height: 0.7;
   margin: 0;
   padding: 15px;
+
+  @media (max-width: 700px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 32px;
+  }
+  @media (max-width: 410px) {
+    font-size: 18px;
+  } ;
 `;
 export const H2Middle = styled(H2)`
   flex-grow: 1;
