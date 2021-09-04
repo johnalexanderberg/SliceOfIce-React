@@ -9,7 +9,7 @@ export function calculateDistance([x, y]) {
 
 export function createMatrix(x, y) {
   if (x <= 0 || isNaN(x) || y <= 0 || isNaN(y)) {
-    throw "Invalid Parameters";
+    return;
   }
 
   const matrix = [];
