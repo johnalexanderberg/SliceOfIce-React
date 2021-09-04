@@ -1,4 +1,4 @@
-//takes mouse X,Y as input, outputs distance from center from 0 (center) to 1 (max distance).
+// outputs distance from center, range 0-1
 export function calculateDistance([x, y]) {
   const center = [window.innerWidth / 2, window.innerHeight / 2];
   const maxHypot = Math.hypot(center[0], center[1]);
