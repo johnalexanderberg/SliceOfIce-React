@@ -3,9 +3,9 @@ import { Footer, H2, H2Middle } from "./styles";
 
 const FooterComponent = () => (
   <Footer>
-    <H2>Best</H2>
-    <H2Middle>Icecream</H2Middle>
-    <H2>2022</H2>
+    <H2>No</H2>
+    <H2Middle>Dairy</H2Middle>
+    <H2>Ice</H2>
   </Footer>
 );
 
