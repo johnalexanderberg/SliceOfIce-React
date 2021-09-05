@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import ImgBox from "./components/ImgBox";
-import { calculateDistance, createMatrix } from "./logic";
+import { calculateDistance, createMatrix, easing } from "./logic";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 
 const App = () => {
   const [distance, setDistance] = useState(1);
   const [matrix, setMatrix] = useState(createMatrix(8, 12));
-
-  const easing = (num) => Math.pow(num, 3);
 
   const handleMove = ({ clientX, clientY }) => {
     setDistance(easing(calculateDistance([clientX, clientY])));
@@ -23,8 +21,15 @@ const App = () => {
 
   const handleClick = () => {
     const x = Math.floor(Math.random() * 11 + 1);
-    const y = Math.floor(Math.random() * 17 + 1);
-    setMatrix(createMatrix(x, y));
+
+    // to make sure there are at least 2 slices
+    function y(x) {
+      if (x === 1) {
+        return Math.floor(Math.random() * 10 + 2);
+      } else return Math.floor(Math.random() * 11 + 1);
+    }
+
+    setMatrix(createMatrix(x, y(x)));
   };
 
   const matrixDimensions = {

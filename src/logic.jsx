@@ -22,3 +22,5 @@ export function createMatrix(x, y) {
 
   return matrix;
 }
+
+export const easing = (num) => Math.pow(num, 3);
