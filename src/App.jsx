@@ -5,7 +5,11 @@ import ImgBox from "./components/ImgBox";
 import { calculateDistance, createMatrix } from "./logic";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 
-const matrix = createMatrix(4, 6);
+const matrix = createMatrix(24, 36);
+const matrixDimensions = {
+  x: matrix[matrix.length - 1][0] + 1,
+  y: matrix[matrix.length - 1][1] + 1,
+};
 
 const App = () => {
   const [distance, setDistance] = useState(1);
@@ -30,7 +34,13 @@ const App = () => {
       <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
         <ImageContainer>
           {matrix.map(([x, y], index) => (
-            <ImgBox key={index} x={x} y={y} percent={distance} />
+            <ImgBox
+              key={index}
+              x={x}
+              y={y}
+              percent={distance}
+              matrixDimensions={matrixDimensions}
+            />
           ))}
 
           <ImageContainer />
