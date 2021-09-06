@@ -23,4 +23,21 @@ export function createMatrix(x, y) {
   return matrix;
 }
 
+export function createRandomMatrix(minSlices, maxX, maxY) {
+  if (maxX < 1 || maxY < 1 || isNaN(maxX) || isNaN(maxY)) {
+    console.log("invalid parameters");
+    return;
+  }
+  let slices = 0;
+  let x = 0;
+  let y = 0;
+  while (slices < minSlices) {
+    x = Math.floor(Math.random() * (maxX - 1) + 1);
+    y = Math.floor(Math.random() * (maxX - 1) + 1);
+    slices = x * y;
+  }
+
+  return createMatrix(x, y);
+}
+
 export const easing = (num) => Math.pow(num, 3);

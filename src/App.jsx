@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import ImgBox from "./components/ImgBox";
-import { calculateDistance, createMatrix, easing } from "./logic";
+import {
+  calculateDistance,
+  createMatrix,
+  createRandomMatrix,
+  easing,
+} from "./logic";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 
 const App = () => {
@@ -20,16 +25,7 @@ const App = () => {
   };
 
   const handleClick = () => {
-    const x = Math.floor(Math.random() * 11 + 1);
-
-    // to make sure there are at least 2 slices
-    function y(x) {
-      if (x === 1) {
-        return Math.floor(Math.random() * 10 + 2);
-      } else return Math.floor(Math.random() * 11 + 1);
-    }
-
-    setMatrix(createMatrix(x, y(x)));
+    setMatrix(createRandomMatrix(3, 24, 24));
   };
 
   const matrixDimensions = {
