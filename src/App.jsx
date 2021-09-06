@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "./components/Header/index";
-import Footer from "./components/Footer/index";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ImgBox from "./components/ImgBox";
 import {
   calculateDistance,
