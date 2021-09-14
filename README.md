@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Alex Gelato
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Site](https://johnalexanderberg.github.io/marblemood/index.html).
 
 ## Available Scripts
 
