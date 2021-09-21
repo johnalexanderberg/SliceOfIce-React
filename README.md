@@ -1,6 +1,6 @@
 # A slice of ice
 
-Excercise in chopping up and animate an image, made in React.
+Excercise in chopping up and animate an image, made with React.
 
 [Check it out here](https://alexgelato.netlify.app).
 
