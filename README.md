@@ -1,6 +1,6 @@
 # A slice of ice
 
-A little excercise in slicing and animating an image with React & Styled Components. Click to re-slice!
+A little excercise in slicing up and animating an image with React & Styled Components. Click to re-slice!
 
 [Check it out here](https://alexgelato.netlify.app).
 
